@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="wrapper">
+        <video autoplay muted loop>           
+            <source src="cloudvideo.mp4" type="video/mp4">
+         </video>
+        <h1>Weather App</h1>
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+
+        <div class="weather-container">
+              <!-- grant location container -->
+            <div class="sub-container grant-location-container">
+                <img src="Location.webp" alt="" width="80" height="80" loading="lazy ">
+                 <p>Grant Location Access</p>
+                 <p>Allow Access to get weather Information</p>
+                 <button class="btn" data-grantAccess>Grant Access </button>
+            </div>
+
+            <!-- search form -->
+            <form class="form-container" data-searchForm>
+                <input type="text" placeholder="Search for City..." data-searchInput>
+                <button class="btn">
+                    <img src="search.webp" alt="" width="25" height="25" loading="lazy">
+                </button>
+            </form>
+
+            <!-- loading container -->
+             <div class="sub-container loading-container">
+                   <img src="loading.gif" alt="" width="130" height="110">
+                   <p>Loading</p>
+             </div>
+
+             <!-- show weather info -->
+             <div class="sub-container user-info-container">
+                     
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+                   
+                <p data-weatherDesc></p>
+                <img data-weatherIcon>
+                <p data-temp></p>
+
+                <div class="active parameter-container">
+                     <div class="parameter">
+                        <img src="wind.jpg" width="80" height="80">
+                        <p>Windspeed</p>
+                        <p data-windspeed></p>
+                     </div>
+                     <div class="parameter">
+                        <img src="humidity.png" width="80" height="80">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                     </div>
+                     <div class="parameter">
+                        <img src="cloud.png" width="80" height="80">
+                        <p>Clouds</p>
+                        <p data-cloudiness></p>
+                     </div>
+
+                </div>
+             </div>
+        </div>
+
+    </div>
+    
+    <script src="weather.js"></script>
+</body>
+</html>
